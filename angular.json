@@ -27,13 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/jquery-ui-dist/jquery-ui.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/jquery-ui-dist/jquery-ui.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

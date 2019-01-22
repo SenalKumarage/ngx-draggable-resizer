@@ -5,8 +5,10 @@ import {
     EventEmitter,
     OnInit
 } from '@angular/core';
+import * as $ from 'jquery';
+import 'jquery-ui/ui/widgets/draggable';
+import 'jquery-ui/ui/widgets/resizable';
 
-declare let $: any;
 
 @Directive({
     // tslint:disable-next-line:directive-selector
@@ -21,7 +23,10 @@ export class DraggableResizerDirective implements OnInit {
 
     ngOnInit() {
 
-        const thisElement = $(this._elemRef.nativeElement);
+        this.loadIfNot('./draggable.css', 'draggable-stylesheet');
+        this.loadIfNot('./resizable.css', 'resizable-stylesheet');
+
+        const thisElement = <any>$(this._elemRef.nativeElement);
         const parent = $('.field-container');
 
         thisElement.resizable({
@@ -39,6 +44,21 @@ export class DraggableResizerDirective implements OnInit {
                 });
             }
         });
+    }
+
+    loadIfNot(url, cssId) {
+
+        if (!document.getElementById(cssId)) {
+            const head = document.getElementsByTagName('head')[0];
+            const link = document.createElement('link');
+            link.id = cssId;
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = url;
+            link.media = 'all';
+            head.appendChild(link);
+        }
+
     }
 }
 
