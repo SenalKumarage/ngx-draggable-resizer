@@ -1,9 +1,9 @@
 {
     "$schema": "../../../node_modules/ng-packagr/package.schema.json",
     "name": "ngx-draggable-resizer",
-    "version": "0.0.0-PLACEHOLDER",
+    "version": "0.0.1",
     "license": "MIT",
-    "private": true,
+    "private": false,
     "keywords": [
         "draggable",
         "resizer",
@@ -32,7 +32,8 @@
         "jquery-ui": "^1.12.1"
     },
     "scripts": {
-        "link-core": ""
+        "build:ngxDraggableResizer": "npm run copy:styles",
+        "copy:styles": "cpx ./src/ngx-draggable-resizer.css ../../../dist/ngx-draggable-resizer/css/"
     },
     "dependencies": {}
 }

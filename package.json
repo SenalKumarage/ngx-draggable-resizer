@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:ngxDraggableResizer": "ng-packagr -p ./src/packages/ngx-draggable-resizer/package.json && cd ./src/packages/ngx-draggable-resizer && npm run build:ngxDraggableResizer"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +25,7 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
     "rxjs": "~6.3.3",
+    "tsickle": "^0.34.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

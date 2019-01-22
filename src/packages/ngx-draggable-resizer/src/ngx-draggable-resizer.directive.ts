@@ -5,10 +5,11 @@ import {
     EventEmitter,
     OnInit
 } from '@angular/core';
-import * as $ from 'jquery';
+import * as jquery from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
 import 'jquery-ui/ui/widgets/resizable';
 
+const $ = jquery;
 
 @Directive({
     // tslint:disable-next-line:directive-selector

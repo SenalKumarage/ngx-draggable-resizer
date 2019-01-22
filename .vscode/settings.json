@@ -3,7 +3,7 @@
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
     "files.exclude": {
-        "node_modules/": false,
+        "node_modules/": true,
     },
     "tslint.autoFixOnSave": true
 }
