@@ -1,0 +1,45 @@
+{
+    "$schema": "../../../node_modules/ng-packagr/package.schema.json",
+    "name": "ngx-draggable-resizer",
+    "version": "0.0.3",
+    "license": "MIT",
+    "repository": "SenalKumarage/ngx-draggable-resizer",
+    "bugs": "https://github.com/SenalKumarage/ngx-draggable-resizer/issues",
+    "homepage": "https://github.com/SenalKumarage/ngx-draggable-resizer",
+    "private": false,
+    "keywords": [
+        "draggable",
+        "resizer",
+        "angular",
+        "angular7",
+        "jquery",
+        "jquery-ui"
+    ],
+    "author": {
+        "name": "Senal Kumarage"
+    },
+    "ngPackage": {
+        "lib": {
+            "entryFile": "public_api.ts",
+            "externals": {
+                "jquery": "jquery",
+                "jquery-ui": "jquery-ui"
+            }
+        },
+        "dest": "../../../dist/ngx-draggable-resizer"
+    },
+    "peerDependencies": {
+        "@angular/animations": "~7.1.0",
+        "@angular/common": "~7.1.0",
+        "@angular/compiler": "~7.1.0",
+        "@angular/core": "~7.1.0",
+        "@angular/forms": "~7.1.0",
+        "jquery": "^3.3.1",
+        "jquery-ui": "^1.12.1"
+    },
+    "scripts": {
+        "build:ngxDraggableResizer": "npm run copy:styles",
+        "copy:styles": "cpx ./src/ngx-draggable-resizer.css ../../../dist/ngx-draggable-resizer/css/"
+    },
+    "dependencies": {}
+}
