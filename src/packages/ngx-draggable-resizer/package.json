@@ -1,13 +1,19 @@
 {
     "$schema": "../../../node_modules/ng-packagr/package.schema.json",
     "name": "ngx-draggable-resizer",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "license": "MIT",
+    "repository": "SenalKumarage/ngx-draggable-resizer",
+    "bugs": "https://github.com/SenalKumarage/ngx-draggable-resizer/issues",
+    "homepage": "https://github.com/SenalKumarage/ngx-draggable-resizer",
     "private": false,
     "keywords": [
         "draggable",
         "resizer",
-        "angular"
+        "angular",
+        "angular7",
+        "jquery",
+        "jquery-ui"
     ],
     "author": {
         "name": "Senal Kumarage"

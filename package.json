@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:ngxDraggableResizer": "ng-packagr -p ./src/packages/ngx-draggable-resizer/package.json && cd ./src/packages/ngx-draggable-resizer && npm run build:ngxDraggableResizer"
+    "build:ngxDraggableResizer": "ng-packagr -p ./src/packages/ngx-draggable-resizer/package.json && cpx ./README.md ./dist/ngx-draggable-resizer && cd ./src/packages/ngx-draggable-resizer && npm run build:ngxDraggableResizer"
   },
   "private": true,
   "dependencies": {
