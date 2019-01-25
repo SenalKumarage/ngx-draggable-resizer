@@ -3,7 +3,8 @@ import {
     ElementRef,
     Output,
     EventEmitter,
-    OnInit
+    OnInit,
+    Input
 } from '@angular/core';
 import * as jquery from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
@@ -16,6 +17,10 @@ const $ = jquery;
     selector: '[draggableResizer]'
 })
 export class DraggableResizerDirective implements OnInit {
+
+    @Input() public draggableOnly: boolean;
+
+    @Input() public resizableOnly: boolean;
 
     @Output() public sizeChanged: EventEmitter<Size> = new EventEmitter();
     @Output() public positionChange: EventEmitter<Position> = new EventEmitter();
@@ -30,21 +35,29 @@ export class DraggableResizerDirective implements OnInit {
         const thisElement = <any>$(this._elemRef.nativeElement);
         const parent = $('.field-container');
 
-        thisElement.resizable({
-            stop: (event, ui) => {
-                this.sizeChanged.emit(ui.size);
-            }
-        });
+        if (!this.draggableOnly) {
 
-        thisElement.draggable({
-            containment: '.field-container',
-            stop: (event, ui) => {
-                this.positionChange.emit({
-                    top: $(this._elemRef.nativeElement).css('top'),
-                    left: $(this._elemRef.nativeElement).css('left')
-                });
-            }
-        });
+            thisElement.resizable({
+                stop: (event, ui) => {
+                    this.sizeChanged.emit(ui.size);
+                }
+            });
+        }
+
+
+        if (!this.resizableOnly) {
+
+            thisElement.draggable({
+                containment: '.field-container',
+                stop: (event, ui) => {
+                    this.positionChange.emit({
+                        top: $(this._elemRef.nativeElement).css('top'),
+                        left: $(this._elemRef.nativeElement).css('left')
+                    });
+                }
+            });
+        }
+
     }
 
     loadIfNot(url, cssId) {
