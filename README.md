@@ -58,9 +58,16 @@ class MainModule {}
 
 ## Options
 
+| Name              | Description                            |                                                              | ----------------- | -------------------------------------- | 
+| sizeChanged       | Triggers when the element gets resized |
+| positionChange    | Triggers when the element gets moved   |
+
+## Events
+
 | Option            | Type                           | Default           | Description                                                                                                                               |
 | ----------------- | ------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | draggableOnly    | boolean                      | false             | Whether the element can only be dragged                                                                                                       |
 | resizableOnly       | boolean                        | false             | Whether the element can only be resized
+
 ## License
 MIT
