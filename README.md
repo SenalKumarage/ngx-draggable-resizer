@@ -55,5 +55,19 @@ class MainModule {}
 ```html
 <div draggableResizer style="background:red;width: 100px;height: 100px;"></div>
 ```
+## Options
+
+| Option        | Type    | Default | Description                             |
+| ------------- | ------- | ------- | --------------------------------------- |
+| draggableOnly | boolean | false   | Whether the element can only be dragged |
+| resizableOnly | boolean | false   | Whether the element can only be resized |
+
+## Events
+
+| Name           | Description                            | Returns                           |
+| -------------- | -------------------------------------- | --------------------------------- |
+| sizeChanged    | Triggers when the element gets resized | `{width: number, height: number}` |
+| positionChange | Triggers when the element gets moved   | `{top: string, left: string}`     |
+
 ## License
 MIT
