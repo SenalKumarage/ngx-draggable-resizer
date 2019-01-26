@@ -57,16 +57,17 @@ class MainModule {}
 ```
 ## Options
 
-| Option            | Type                           | Default           | Description                                                                                                                               |
-| ----------------- | ------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| draggableOnly    | boolean                      | false             | Whether the element can only be dragged                                                                                                       |
-| resizableOnly       | boolean                        | false             | Whether the element can only be resized
+| Option        | Type    | Default | Description                             |
+| ------------- | ------- | ------- | --------------------------------------- |
+| draggableOnly | boolean | false   | Whether the element can only be dragged |
+| resizableOnly | boolean | false   | Whether the element can only be resized |
 
 ## Events
 
-| Name              | Description                            |                                                              | ----------------- | -------------------------------------- | 
-| sizeChanged       | Triggers when the element gets resized |
-| positionChange    | Triggers when the element gets moved   |
+| Name           | Description                            | Returns                           |
+| -------------- | -------------------------------------- | --------------------------------- |
+| sizeChanged    | Triggers when the element gets resized | `{width: number, height: number}` |
+| positionChange | Triggers when the element gets moved   | `{top: string, left: string}`     |
 
 ## License
 MIT
