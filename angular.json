@@ -27,7 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/packages/ngx-draggable-resizer/src/ngx-draggable-resizer.css"
             ],
             "scripts": []
           },
