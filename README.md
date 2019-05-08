@@ -2,7 +2,7 @@
 
 A light-weight jquery-ui based directive in Angular for resizing and dragging elements. 
 
-DEMO:
+DEMO: https://senalkumarage.github.io/ngx-draggable-resizer-demo/
 
 ## Features
 - Element resize
@@ -25,7 +25,7 @@ npm install ngx-draggable-resizer --save
 ```typescript
 import { CommonModule } from '@angular/common';
 
-import { NgxDraggableResizerModule } from 'NgxDraggableResizerModule';
+import { NgxDraggableResizerModule } from 'ngx-draggable-resizer';
 
 @NgModule({
   imports: [
@@ -50,7 +50,14 @@ class MainModule {}
         "./node_modules/ngx-draggable-resizer/css/ngx-draggable-resizer.css"
     ]
     ```
-
+- **Step 3:** Including jQuery
+    - This step is not relevant if you have already setup jQuery in your project
+    - In your `angular.json` file
+    ```json
+    "scripts": [
+        "./node_modules/jquery/dist/jquery.min.js"
+    ]
+    ```
 ## Usage
 ```html
 <div draggableResizer style="background:red;width: 100px;height: 100px;"></div>
